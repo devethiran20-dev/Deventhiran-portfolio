@@ -1,96 +1,512 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Deventhiran R | Digital Marketing Portfolio</title>
+
+<meta name="description" content="Digital Marketing Portfolio of Deventhiran R - Social Media, Canva Design, Meta Ads and SEO.">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b1020;color:#fff;line-height:1.7}
-header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;background:#101a30}
-.logo{color:#40d9ff;font-weight:bold;font-size:22px}
-nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
-section{padding:65px 8%}
-.hero{min-height:65vh;display:flex;flex-direction:column;justify-content:center}
-.tag{color:#40d9ff;font-weight:bold}
-h1{font-size:clamp(38px,7vw,65px);line-height:1.15;margin:15px 0}
-h2{color:#40d9ff;margin-bottom:20px;font-size:30px}
-p{color:#c7d2e4;margin:10px 0}
-.btn{display:inline-block;background:#40d9ff;color:#07111e;padding:12px 22px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:18px}
-.card{background:#121e35;padding:25px;border:1px solid #263a59;border-radius:12px;margin:14px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-footer{text-align:center;padding:25px;background:#101a30;color:#aab7ca}
+:root {
+  --bg: #111014;
+  --card: #1d1922;
+  --orange: #ff784f;
+  --purple: #b69cff;
+  --cream: #fff4df;
+  --text: #f8f4ed;
+  --muted: #b8afbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #151219;
+  border-bottom: 1px solid #332a38;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--cream);
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+section {
+  padding: 85px 9%;
+}
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, #b69cff25, transparent 35%),
+    radial-gradient(circle at 10% 90%, #ff784f20, transparent 35%);
+}
+
+.label {
+  color: var(--orange);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(45px, 8vw, 85px);
+  line-height: 1.08;
+  margin: 20px 0;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: var(--orange);
+}
+
+.hero p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 23px;
+  border-radius: 8px;
+  background: var(--orange);
+  color: #1a1010;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  background: var(--cream);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #66576b;
+  color: var(--text);
+}
+
+h2 {
+  font-size: clamp(30px, 5vw, 45px);
+  margin: 12px 0 25px;
+  line-height: 1.2;
+}
+
+.intro {
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #352b3c;
+  padding: 27px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  border-color: var(--orange);
+  box-shadow: 0 10px 35px #00000030;
+}
+
+.card h3 {
+  font-size: 21px;
+  color: var(--cream);
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.project-number {
+  color: var(--purple);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  display: inline-block;
+  background: #ff784f18;
+  color: var(--orange);
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  margin: 14px 5px 0 0;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.skill {
+  background: var(--card);
+  border: 1px solid #352b3c;
+  padding: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: #35253b;
+  color: var(--orange);
+}
+
+.education {
+  border-left: 3px solid var(--orange);
+  padding-left: 22px;
+  margin: 25px 0;
+}
+
+.contact-box {
+  background: linear-gradient(120deg, #35253b, #492b30);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid #62404d;
+}
+
+.contact-box p {
+  color: #e3d7df;
+  margin: 12px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+  border-top: 1px solid #332a38;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 5%;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  section {
+    padding: 65px 6%;
+  }
+
+  .hero {
+    min-height: 550px;
+  }
+
+  .grid,
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box {
+    padding: 25px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="logo">DEV R.</div>
-<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+  <a class="logo" href="#">DEV<span>.</span>R</a>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-<span class="tag">DIGITAL MARKETING FRESHER</span>
-<h1>Hello, I'm<br>Deventhiran R.</h1>
-<p>Digital Marketing | Social Media Management | Meta Ads</p>
-<p>Helping brands build their digital presence through creative content and digital marketing strategies.</p>
-<a class="btn" href="#projects">Explore My Work</a>
+  <div>
+    <div class="label">DIGITAL MARKETING PORTFOLIO</div>
+
+    <h1>
+      Creative Ideas.<br>
+      <span>Digital Growth.</span>
+    </h1>
+
+    <p>
+      Hi, I'm Deventhiran R. I explore digital marketing through
+      creative design, social media management, Meta Ads and SEO.
+      I enjoy turning ideas into meaningful digital experiences.
+    </p>
+
+    <div class="buttons">
+      <a class="btn" href="#projects">Explore My Projects ↗</a>
+      <a class="btn btn-outline" href="#contact">Contact Me</a>
+    </div>
+  </div>
 </section>
 
 <section id="about">
-<h2>About Me</h2>
-<div class="card">
-<p>I am a Digital Marketing enthusiast with practical internship experience in social media management and Instagram page handling. I have worked on content planning, page management and digital marketing activities. I am passionate about learning new strategies and helping businesses grow online.</p>
-</div>
-</section>
+  <div class="label">01 / ABOUT ME</div>
 
-<section id="skills">
-<h2>My Skills</h2>
-<div class="grid">
-<div class="card">Social Media Management</div>
-<div class="card">Instagram Marketing</div>
-<div class="card">Meta Ads – Fundamentals</div>
-<div class="card">SEO Fundamentals</div>
-<div class="card">Canva Design</div>
-<div class="card">Content Planning</div>
-</div>
+  <h2>About Me</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Who I Am</h3>
+      <p>
+        I am a Digital Marketing enthusiast with internship experience
+        in Instagram page management and social media activities.
+        I have explored Canva design, Meta Ads, Meta Pixel,
+        blogging and SEO through practical learning projects.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>My Interests</h3>
+      <p>Social Media Marketing</p>
+      <p>Creative Content Design</p>
+      <p>Meta Ads and Tracking</p>
+      <p>Blogging and SEO</p>
+    </div>
+  </div>
 </section>
 
 <section id="projects">
-<h2>Experience & Projects</h2>
-<div class="card">
-<h3>ZIA Educational Technology</h3>
-<p>6-Month Internship</p>
-<p>Instagram page management and social media content activities for ZIA and Blues Music.</p>
-</div>
-<div class="card">
-<h3>Digital Growth Hub</h3>
-<p>Personal digital marketing project focused on social media content creation and Instagram growth.</p>
-</div>
+  <div class="label">02 / MY WORK</div>
+
+  <h2>Featured Projects</h2>
+
+  <p class="intro">
+    Practical projects and digital marketing activities
+    that helped me develop my skills.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="project-number">PROJECT 01</div>
+      <h3>Web Browser Project</h3>
+      <p>
+        Developed a browser-based project as part of my
+        practical technology learning.
+      </p>
+      <span class="tag">Web Project</span>
+      <span class="tag">Development</span>
+    </div>
+
+    <div class="card">
+      <div class="project-number">PROJECT 02</div>
+      <h3>YouTube Music Browser</h3>
+      <p>
+        Created a browser-based music project focused on
+        exploring and accessing music content.
+      </p>
+      <span class="tag">Browser</span>
+      <span class="tag">Music</span>
+    </div>
+
+    <div class="card">
+      <div class="project-number">PROJECT 03</div>
+      <h3>Instagram Creative Designs</h3>
+      <p>
+        Created Instagram thumbnails, posters and social
+        media creatives using Canva.
+      </p>
+      <span class="tag">Canva</span>
+      <span class="tag">Instagram</span>
+      <span class="tag">Design</span>
+    </div>
+
+    <div class="card">
+      <div class="project-number">PROJECT 04</div>
+      <h3>Meta Ads Pixel Setup</h3>
+      <p>
+        Practised Meta Pixel setup and explored website
+        tracking concepts for digital advertising.
+      </p>
+      <span class="tag">Meta Ads</span>
+      <span class="tag">Meta Pixel</span>
+    </div>
+
+    <div class="card">
+      <div class="project-number">PROJECT 05</div>
+      <h3>Blog Creation & SEO</h3>
+      <p>
+        Started a blog and worked on SEO fundamentals,
+        content optimization and search visibility.
+      </p>
+      <span class="tag">Blogging</span>
+      <span class="tag">SEO</span>
+    </div>
+
+    <div class="card">
+      <div class="project-number">PROJECT 06</div>
+      <h3>Blog SEO Analysis</h3>
+      <p>
+        Analysed blog content and SEO elements to identify
+        opportunities for improving search performance.
+      </p>
+      <span class="tag">SEO Analysis</span>
+      <span class="tag">Research</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="label">03 / MY SKILLS</div>
+
+  <h2>Skills & Tools</h2>
+
+  <div class="skills">
+    <div class="skill">Social Media Management</div>
+    <div class="skill">Instagram Marketing</div>
+    <div class="skill">Canva Design</div>
+    <div class="skill">Meta Ads Fundamentals</div>
+    <div class="skill">Meta Pixel</div>
+    <div class="skill">SEO Fundamentals</div>
+    <div class="skill">Blogging</div>
+    <div class="skill">Content Planning</div>
+    <div class="skill">Creative Design</div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="label">04 / EXPERIENCE</div>
+
+  <h2>Internship Experience</h2>
+
+  <div class="card">
+    <div class="project-number">6 MONTHS INTERNSHIP</div>
+
+    <h3>ZIA Educational Technology</h3>
+
+    <p>
+      Worked on social media activities and managed Instagram
+      pages for ZIA and Blues Music. Gained practical exposure
+      to content planning and page management.
+    </p>
+
+    <span class="tag">Instagram Management</span>
+    <span class="tag">Social Media</span>
+  </div>
 </section>
 
 <section id="education">
-<h2>Education</h2>
-<div class="card">
-<h3>B.E. – Electrical and Electronics Engineering</h3>
-<p>Angel College of Engineering and Technology</p>
-<p>Currently pursuing 2nd Year</p>
-</div>
-<div class="card">
-<h3>Diploma – Electrical and Electronics Engineering</h3>
-<p>Arulmurugan College of Polytechnic</p>
-<p>Completed in 2026</p>
-</div>
+  <div class="label">05 / EDUCATION</div>
+
+  <h2>Education</h2>
+
+  <div class="education">
+    <h3>B.E. – Electrical and Electronics Engineering</h3>
+    <p>Angel College of Engineering and Technology</p>
+    <p>Currently Pursuing 2nd Year</p>
+  </div>
+
+  <div class="education">
+    <h3>Diploma – Electrical and Electronics Engineering</h3>
+    <p>Arulmurugan College of Polytechnic</p>
+    <p>Completed in 2026</p>
+  </div>
 </section>
 
 <section id="contact">
-<h2>Contact Me</h2>
-<div class="card">
-<p>Email: devethiran20@gmail.com</p>
-<p>Phone: 8610813481</p>
-<a class="btn" href="mailto:devethiran20@gmail.com">Email Me</a>
-</div>
+  <div class="contact-box">
+    <div class="label">06 / LET'S CONNECT</div>
+
+    <h2>Let's Work Together.</h2>
+
+    <p>
+      I'm open to internship opportunities, learning experiences
+      and entry-level digital marketing roles.
+    </p>
+
+    <p>Email: devethiran20@gmail.com</p>
+    <p>Phone: 8610813481</p>
+
+    <div class="buttons">
+      <a class="btn" href="mailto:devethiran20@gmail.com">
+        Send Me an Email ↗
+      </a>
+    </div>
+  </div>
 </section>
 
-<footer>© 2026 Deventhiran R | Digital Marketing Portfolio</footer>
+<footer>
+  © 2026 Deventhiran R · Digital Marketing Portfolio
+</footer>
+
 </body>
-</html>
+                                            </html>
+                                            
